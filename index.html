@@ -12,74 +12,25 @@
 
     <div class="container">
 
-      <div class="row">
+    {% for example in site.examples %}
+      <div class="row card-row">
         <div class="col-md-4">
-          <img src="./assets/images/cylindrical-cell.png" class="card-img">
+          <img src="./assets/images/{{ example.image }}" class="card-img">
         </div>
         <div class="col-md-8">
-          <h3>Cylindrical cell</h3>
-
-          <p>In this example we demonstrate the loose coupling of three
-          components for a cylindrical cell (i.e, Dualfoil for Electro-Chemistry
-          transport, Amperes for Electrical flow and Amperes for Thermal
-          transport). All the components and simulation parameters are defined
-          inside the configuration file.</p>
-
-          <a class="btn btn-primary" href="#" role="button">Jupyter Notebook</a>
+          <h3>{{ example.title }}</h3>
+          <p>{{ example.content }}</p>
+          <a class="btn btn-primary" href="{{ example.link }}" role="button">Jupyter Notebook</a>
         </div>
       </div>
+    {% endfor %}
 
-      <div class="row">
-        <div class="col-md-4">
-          <img src="./assets/images/pouch-cell.png" class="card-img">
-        </div>
-        <div class="col-md-8">
-          <h3>Pouch cell</h3>
-
-          <p>Default case in ICE with the NTG model coefficients based on
-          NMC-Graphite cell discharge profiles. All the components and
-          simulation parameters are defined inside the configuration file.</p>
-
-          <a class="btn btn-primary" href="#" role="button">Jupyter Notebook</a>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4">
-          <img src="./assets/images/unrolled-cell.png" class="card-img">
-        </div>
-        <div class="col-md-8">
-          <h3>Unrolled cell</h3>
-
-          <p>In this example we demonstrate the loose coupling of two components
-          for an unrolled cell (i.e. Dualfoil for electro-chemistry transport
-          and Amperes for thermal transport). All the components and simulation
-          parameters are defined in the provided configuration file.</p>
-
-          <a class="btn btn-primary" href="#" role="button">Jupyter Notebook</a>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-4">
-          <img src="./assets/images/coupled-ntg-thermal.png" class="card-img">
-        </div>
-        <div class="col-md-8">
-          <h3>Coupled NTG-Thermal</h3>
-
-          <p>In this example the experimental data of constant current discharge
-          of leaf cells are provided within in the directory. The processed
-          experimental discharge data under various C Rates are normalized
-          against time. The cell potentials are plotted against the current
-          density coordinates, the intercepts of these curves at zero current
-          density represent the values of open circuit potential and the slopes
-          represent the reciprocal of the cell polarization parameter. These
-          discrete data points can be curve fitted to a polynomial expression
-          accurately parametrize the NTG model.</p>
-
-          <a class="btn btn-primary" href="#" role="button">Jupyter Notebook</a>
-        </div>
-      </div>
+     <div class="row">
+       <div class="col">
+          <br>
+          <p class="small text-center">Updated on October 25, 2019</p>
+       </div>
+     </div>
 
     </div>
 
