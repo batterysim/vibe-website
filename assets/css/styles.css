@@ -8,18 +8,12 @@ body {
     padding-top: 20px;
 }
 
-.card-row {
-    background-color: white;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
 .card-img {
     display: block;
+    margin-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
     max-height: 250px;
     width: auto;
 }
@@ -27,15 +21,7 @@ body {
 @media (max-width: 480px) {
 
     .container {
-        background-color: white;
         padding-bottom: 10px;
-    }
-
-    .card-row {
-        border-radius: 0px;
-        margin-bottom: 80px;
-        padding-bottom: 0px;
-        padding-top: 0px;
     }
 
 }
